@@ -1,0 +1,12 @@
+# Configuration settings for portsync
+
+# Where to store the temp files:
+tmpdir=/path/to/temp_files
+# Where to store master hash file (it is really glood if this is unique for each sync)
+portsync_dir=/path/to/master.chk
+# Default source directory
+source_dir=/path/to/source
+# Default destination directory, can be overridden on the command line
+normal_dest_dir=/path/to/dest
+# Default portable destination, can be overridden on the command line
+normal_portable_dir=/path/to/portable_storage
