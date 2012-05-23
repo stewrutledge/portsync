@@ -7,6 +7,13 @@
 #########################################################################################################
 
 # Location of configuration file:
+# Make sure rsync binary exists
+which rsync >> /dev/null
+which_rsync=$(echo $?)
+if [[ $which_rsync == "1" ]]; then
+  echo 'rsync binary not found. Make sure it is installed or in $PATH'
+  exit 1
+fi
 
 function usage {
 echo "Usage: $0 -t [type] -s [source] -d [destination]
