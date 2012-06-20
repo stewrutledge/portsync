@@ -1,6 +1,6 @@
 portsync is a utility for performing incremental backups without the need of a full backup to diff from.
 
-Which a full backup is taken (or the argument -t gen-hash is passed) a master list is created with the ctime of all items in the source folder. When portsync is ran with -t portable, a new list of ctimes is created, which is then diffed against the previous list a file is created and passed to rsync, backing up only files that have changed since the last master list generation, without a backup on the other end to diff from.
+When a full backup is taken (or the argument -t gen-hash is passed) a master list is created with the ctime of all items in the source folder. When portsync is ran with -t portable, a new list of ctimes is created, which is then diffed against the previous list a file is created and passed to rsync, backing up only files that have changed since the last master list generation, without a backup on the other end to diff from.
 
 Usage: portsync -t [type] -s [source] -d [destination]
 or
